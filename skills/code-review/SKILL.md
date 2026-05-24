@@ -134,9 +134,19 @@ var displayName: LocalizedStringResource {
 }
 ```
 
-## Instructions
+## Operational Modes
 
-### Review Stage
+### Automatic Review
+
+You should do a light review pass after any significant change, and make sure that the change adheres to the guidelines.
+If violations are found that are trivial to fix, just proactively fix them and briefly mention what you did as part of the change summary.
+In the case that violations are non-trivial to fix, you should tell the user about the issues and ask them how to proceed.
+
+### Manual Review
+
+The user can ask for a manual review at any time. You should then do a thorough two-stage review of the whole codebase, or the specific systems the user mentioned, if any.
+
+#### Stage 1: Expert Review
 > Do not make any code changes at this stage.
 
 1. Review the existing codebase according to the FiveSheep guidelines.
@@ -144,7 +154,7 @@ var displayName: LocalizedStringResource {
 3. Present the issues to the user. For architectural issues, include a short description on how you plan to fix each of them.
 4. Wait for the user to tell you how to proceed.
 
-### Implementation Stage
+#### Stage 2: Implementation
 > If the user wants you to implement some or all of the suggested changes, this pass will start.
 > At this stage, code changes are required and explicitly allowed.
 
@@ -153,7 +163,10 @@ var displayName: LocalizedStringResource {
 3. Once the scope is clear and all tasks requiring approval are approved, go ahead with the implementation, implementing each fix one-by-one.
 4. Once all fixes are implemented, let the user know and ask them to double-check your changes before committing.
 
-#### Building
+## Internal Information
+> This information is just for you, so you can do your job efficiently.
+
+### Building the app and running tests
 
 Since most Xcode/Swift projects don't build cleanly in the sandbox due to restricted network and cache access, you are encouraged to run builds using escalated permissions.
 In most cases, escalated builds will be auto-approved with no further intervention from the user.
