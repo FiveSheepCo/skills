@@ -1,6 +1,6 @@
 ---
 name: code-review
-description: Reviews SwiftUI apps according to FiveSheep best practices
+description: Reviews SwiftUI code according to FiveSheep best practices. Must be considered for every significant change to a SwiftUI codebase.
 ---
 
 # Code Review
