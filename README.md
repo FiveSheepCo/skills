@@ -13,3 +13,8 @@ This skill comes with two modes:
 The passive mode is always active and should run automatically when necessary.
 
 **Install**: `npx skills add FiveSheepCo/skills --skill code-review`
+
+### `app-translation`
+> Translate apps into various languages.
+
+**Install**: `npx skills add FiveSheepCo/skills --skill app-translation`
